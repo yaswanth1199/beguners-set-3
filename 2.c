@@ -5,7 +5,7 @@
 int main()
 {
     int a[100];
-   int n,j=0;
+   int n,j=0,i=0,c;
    scanf("%d",&n);
    while(j<n)
    {
@@ -14,5 +14,18 @@ int main()
        ++j;
    }
  
-    printf("%d",a[n-1]);
+  while(i<n-1)
+  {
+      if(a[i]<a[i+1])
+      {
+          c=a[i+1];
+      }
+      else
+      {
+          c=a[i];
+      }
+      
+  ++i; 
+  }
+  printf("%d",c);
 }
